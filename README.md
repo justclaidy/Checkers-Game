@@ -1,2 +1,2 @@
-# DurakGame
-Durak Game Written in C++
+# CheckersGame
+Checkers Game Written in C++
