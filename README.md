@@ -1,2 +1,2 @@
-# chessgamecpp
-Chess Game Written in C++
+# DurakGame
+Durak Game Written in C++
