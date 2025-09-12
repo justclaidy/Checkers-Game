@@ -13,7 +13,6 @@ private:
     Board board;
     Player player1;
     Player player2;
-    Player* currentPlayer;
     GameResult result;
 
     void switchPlayer();
