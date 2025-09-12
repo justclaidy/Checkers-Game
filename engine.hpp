@@ -9,7 +9,7 @@ public:
     void start();
     GameResult getGameState() const;
 
-private:
+public:
     Board board;        
     Player player1;     
     Player player2;    
