@@ -8,8 +8,6 @@ public:
     GameEngine();
     void start();
     GameResult getGameState() const;
-
-public:
     Board board;        
     Player player1;     
     Player player2;    
