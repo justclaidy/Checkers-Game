@@ -17,6 +17,6 @@ Acest proiect este o implementare a jocului de Dame (Checkers) folosind C++.
 - `Piece` - reprezintă o piesă de joc (tip, culoare, poziție)
 - `Player` - reprezintă un jucător (nume, culoare, număr de piese)
 - `Board` - reprezintă tabla de joc și starea curentă a jocului
-- `Result` - reprezintă rezultatul jocului
+- `Result` - reprezintă rezultatul jocului, starea finală sau intermediară
 - `Engine` - gestionează logica jocului, controlul jucătorilor și actualizarea stării
 - `Painter` Painter este responsabil pentru afișarea vizuală a tablei și a pieselor
