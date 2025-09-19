@@ -7,7 +7,7 @@ class GameEngine {
 public:
     GameEngine();
     void start();
-    GameResult getGameState() const;
+    GameResult getGameState();
     Board board;        
     Player player1;     
     Player player2;    
