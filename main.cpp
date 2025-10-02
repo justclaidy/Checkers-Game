@@ -1,9 +1,8 @@
-#include <iostream>
-#include "board.hpp"
+#include "game_engine.hpp"
 
 int main() {
-    Board board;
-    board.init();
-    std::cout << "Tabla de joc initializata!\n";
+    GameEngine engine;
+    engine.Init();
+    engine.Run();
     return 0;
 }
