@@ -1,5 +1,6 @@
 #include "board.hpp"
 
+
 Board::Board(int w, int h) : width(w), height(h) {}
 
 Board::Board(const Board& other) : width(other.width), height(other.height) {}
