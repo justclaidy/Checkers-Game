@@ -2,9 +2,9 @@
 #include <iostream>
 
 void Painter::DrawBoard() {
-    std::cout << "Board ready" << std::endl;
+    std::cout << "Desenez tabla de joc...\n";
 }
 
 void Painter::WriteText() {
-    std::cout << "Text" << std::endl;
+    std::cout << "Scriu text pe ecran...\n";
 }
