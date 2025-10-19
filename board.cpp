@@ -1,15 +1,30 @@
 #include "board.hpp"
 
+Board::Board(int w, int h) : width(w), height(h) {}
+
+Board::Board(const Board& other) : width(other.width), height(other.height) {}
+
 void Board::init() {
-    for(int i = 0; i < 8; i++) {
-        for(int j = 0; j < 8; j++) {
-            if((i + j) % 2 == 1) {
-                if(i < 3) grid[i][j] = 'B';
-                else if(i > 4) grid[i][j] = 'W';
-                else grid[i][j] = ' ';
-            } else {
-                grid[i][j] = '.';
-            }
-        }
-    }
+    // poți lăsa golă sau poți pune ceva simplu pentru inițializare
+    std::cout << "Tabla a fost inițializată (" << width << "x" << height << ")\n";
+}
+
+Board& Board::operator=(const Board& other) {
+    width = other.width;
+    height = other.height;
+    return *this;
+}
+
+bool Board::operator==(const Board& other) const {
+    return width == other.width && height == other.height;
+}
+
+std::istream& operator>>(std::istream& in, Board& b) {
+    in >> b.width >> b.height;
+    return in;
+}
+
+std::ostream& operator<<(std::ostream& out, const Board& b) {
+    out << b.width << " " << b.height;
+    return out;
 }
