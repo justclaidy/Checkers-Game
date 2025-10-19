@@ -5,7 +5,6 @@ Board::Board(int w, int h) : width(w), height(h) {}
 Board::Board(const Board& other) : width(other.width), height(other.height) {}
 
 void Board::init() {
-    // poți lăsa golă sau poți pune ceva simplu pentru inițializare
     std::cout << "Tabla a fost inițializată (" << width << "x" << height << ")\n";
 }
 
