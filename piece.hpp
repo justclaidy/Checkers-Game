@@ -1,5 +1,6 @@
 #pragma once
 #include <iostream>
+#include <string>
 
 enum PieceColor { WHITE, BLACK };
 enum PieceType { MAN, QUEEN };
@@ -13,6 +14,7 @@ struct Piece {
 
     Piece& operator=(const Piece& other);
     bool operator==(const Piece& other) const;
+    std::string ToString() const;
 };
 
 std::istream& operator>>(std::istream& in, Piece& p);
