@@ -1,30 +1,26 @@
 #include "board.hpp"
 
-
-Board::Board(int w, int h) : width(w), height(h) {}
-
-Board::Board(const Board& other) : width(other.width), height(other.height) {}
+Board::Board(int w, int h): width(w), height(h) {}
+Board::Board(const Board& o): width(o.width), height(o.height), pieces(o.pieces) {}
 
 void Board::init() {
-    std::cout << "Tabla a fost inițializată (" << width << "x" << height << ")\n";
+    pieces.clear();
+    std::cout << "Tabla inițializată (" << width << "x" << height << ")\n";
 }
 
-Board& Board::operator=(const Board& other) {
-    width = other.width;
-    height = other.height;
+Board& Board::operator=(const Board& o) {
+    if (this != &o) { width=o.width; height=o.height; pieces=o.pieces; }
     return *this;
 }
 
-bool Board::operator==(const Board& other) const {
-    return width == other.width && height == other.height;
+bool Board::operator==(const Board& o) const {
+    return width==o.width && height==o.height && pieces.size()==o.pieces.size();
 }
 
 std::istream& operator>>(std::istream& in, Board& b) {
-    in >> b.width >> b.height;
-    return in;
+    return in >> b.width >> b.height;
 }
 
 std::ostream& operator<<(std::ostream& out, const Board& b) {
-    out << b.width << " " << b.height;
-    return out;
+    return out << b.width << " " << b.height;
 }
