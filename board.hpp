@@ -1,15 +1,16 @@
 #pragma once
 #include <iostream>
+#include <vector>
+
+struct Piece { char s; int x, y; };
 
 struct Board {
-    int width;
-    int height;
+    int width, height;
+    std::vector<Piece> pieces;
 
-    Board(int w = 8, int h = 8);
+    Board(int w=8, int h=8);
     Board(const Board& other);
-
     void init();
-
     Board& operator=(const Board& other);
     bool operator==(const Board& other) const;
 };
