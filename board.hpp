@@ -1,4 +1,5 @@
 #pragma once
+#include "piece.hpp"
 #include <iostream>
 #include <vector>
 

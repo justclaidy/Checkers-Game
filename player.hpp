@@ -1,12 +1,14 @@
 #pragma once
-#include <iostream>
 #include "piece.hpp"
+#include <iostream>
+#include <string>
 
 struct Player {
+    std::string name;
     int score;
     PieceColor color;
 
-    Player(int s = 0, PieceColor c = WHITE);
+    Player(int s = 0, PieceColor c = WHITE, const std::string& n = "Anonim");
     Player(const Player& other);
 
     Player& operator=(const Player& other);
