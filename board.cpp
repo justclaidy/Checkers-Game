@@ -9,6 +9,9 @@ Board& Board::operator=(const Board& o) {
     if (this != &o) { width=o.width; height=o.height; pieces=o.pieces; }
     return *this;
 }
+void Board::addPiece(const Piece& piece, const Coord& pos) {
+    pieces.push_back({piece, pos});
+}
 bool Board::operator==(const Board& o) const {
     if (width != o.width || height != o.height || pieces.size() != o.pieces.size()) return false;
     for (size_t i = 0; i < pieces.size(); ++i) {
